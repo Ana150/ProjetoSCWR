@@ -27,7 +27,7 @@ a + b
 pnorm(100, 120, 15, lower.tail = TRUE)
 
 #Qual o tempo correspondente à produção de 95% dos itens?
-qnorm(0.95, 120, 15, lower.tail = TRUE
+qnorm(0.95, 120, 15, lower.tail = TRUE)
 
 #Qual o intervalo de tempo central correspondente
 qnorm(0.10, 120, 15, lower.tail = TRUE)
@@ -41,3 +41,23 @@ z <- (164-175)/10
 z
 
 pnorm(z)
+
+#exemplo
+pnorm(95, 100, 10/sqrt(25), lower.tail = TRUE)
+
+#EXERCICIO 1 - AULA 3
+#Primeiro devemos encontrar a média amostral:
+m <- 110/50
+#Agora devemos encontrar o erro padrão da média amostral: 
+dp <- 0.7/sqrt(50)
+#Agora podemos encontrar a probabilidade:
+pnorm(m, 2, dp, lower.tail = FALSE) 
+#Portanto, P( > 2) ≈ 0,0216 ; é um evento pouco provável.
+
+#EXERCICIO 2 - AULA 3
+#Primeiro devemos encontrar o erro padrão da média amostral: 
+dp <- 5/sqrt(16)
+#Agora podemos encontrar a probabilidade:
+a <- pnorm(169, 172, dp, lower.tail = TRUE)
+b <- pnorm(175, 172, dp, lower.tail = TRUE)
+b - a
